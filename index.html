@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="src/components/Home/index.css">
+    <link rel="stylesheet" href="src/styles/all.css">
+    <link rel="stylesheet" href="src/components/Teatro/index.css">
+    <link rel="stylesheet" href="src/components/Ingressos/index.css">
+
+    <title>Nome do evento</title>
+</head>
+<body>
+    
+<main class="home">
+    <div class="home__left fade-in">
+    <h4>Direto do Rio de Janeiro</h4>
+    <h1>A NOVIDADE</h1>
+    <p>EM 4 ATOS</p>
+    <h3>
+        Com<br>
+        <a href="#">Paulinho Lira</a> 
+        & 
+        <a href="#">Luana Santos</a><br>
+        Direção: <u>Letícia Rodrigues</u>
+    </h3>
+    <div class="home__left__div fade-in">
+        <h2><b>14</b> e <b>15</b> de Setembro às <b>20h</b></h2>
+        <img src="assets/images/logo.png">
+        <h1>EDNALDO DO EGYPTO</h1>
+    </div>
+    <button id="scrollButton">
+        Garantir ingresso agora!
+    </button>
+    <script>
+        document.getElementById('scrollButton').addEventListener('click', function() {
+    document.getElementById('ingresso').scrollIntoView({
+        behavior: 'smooth'
+    });
+});
+    </script>
+    </div>
+    <div class="home__right">
+        <img src="assets/images/pl.png">
+    </div>
+</main>
+
+<main class="teatro fade-in">
+    <div class="teatro__left">
+        <img src="assets/images/fundo.jpg">
+        <button id="scrollButton2">
+            Garantir ingresso agora!
+        </button>
+        <script>
+            document.getElementById('scrollButton2').addEventListener('click', function() {
+        document.getElementById('ingresso').scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+        </script>
+    </div>
+    <div class="teatro__right fade-in">
+        <h1>Teatro Ednaldo do Egypto</h1>
+        <p>Nos dias 14 e 15 de setembro, o Teatro Ednaldo do Egypto em <b>João Pessoa</b> será palco de uma emocionante peça musical, destacando o talento de <b>Paulinho Lira e Luana Santos.</b><br><br>
+
+        Paulinho Lira, conhecido por suas composições que mesclam <b>ritmos tradicionais com uma abordagem contemporânea</b>, e Luana Santos, uma talentosa <b>cantora e compositora</b>, apresentarão seu trabalho autoral. A dupla promete uma performance envolvente, repleta de melodias cativantes e letras profundas que refletem suas experiências e visões artísticas.<br><br>
+            
+        Será uma oportunidade única para apreciar a música autoral desses artistas, em um ambiente acolhedor e culturalmente rico. <b>Não perca essa chance de vivenciar uma noite de música e emoção no Teatro Ednaldo do Egypto!</b>
+        </p>
+        <h4>O Teatro Ednaldo do Egito está localizado na <b>Av. Maria Rosa, 284 - Manaíra, João Pessoa - PB, 58038-460, Brasil.</b> Ele oferece peças teatrais, dança e música, além de diversos cursos, em espacinho tradicional da prefeitura municipal.
+        Você pode ver mais informações sobre o teatro <a href="https://www.instagram.com/explore/locations/9856867/teatro-ednaldo-do-egypto/" target="_blank">AQUI</a>.</h4>
+    </div>
+</main>
+
+<main class="ingressos" id="ingresso">
+    <div class="comprar__ingressos">
+        <h1>Comprar ingressos</h1>
+    </div>
+    <div class="cards">
+        <div class="card">
+            <img src="assets/images/inteira.png">
+            <h2>INTEIRA</h2>
+            <p>R$40,00</p>
+            <button id="comprar_btn2">
+                Garantir minha vaga!
+            </button>
+
+            <div id="qr_modal40" class="modal">
+                <div class="modal_content">
+                    <span id="close_modal" class="close">&times;</span>
+                    <p>Coloque seu nome completo na descrição do pagamento:</p>
+                    <img id="qr_code_img" src="path/to/your/qrcode.png" alt="QR Code">
+                    <a href="https://wa.me/5524999250813">Enviar comprovante</a>
+                </div>
+            </div>
+
+            <script>
+                document.getElementById('comprar_btn2').addEventListener('click', function() {
+    document.getElementById('qr_modal40').style.display = 'block';
+});
+
+document.getElementById('close_modal').addEventListener('click', function() {
+    document.getElementById('qr_modal40').style.display = 'none';
+});
+
+window.onclick = function(event) {
+    if (event.target == document.getElementById('qr_modal40')) {
+        document.getElementById('qr_modal40').style.display = 'none';
+    }
+};
+            </script>
+
+            <button style="background-color: #fff; border: 3px dashed; color: #000;" onclick="window.open('https://wa.me/5524999250813', '_blank');">
+                Saber mais informações
+            </button>
+        </div>
+        <div class="card">
+            <img src="assets/images/meia.png">
+            <h2>MEIA</h2>
+            <div>
+            </div>
+            <p>R$20,00</p>
+            <button id="comprar_btn">
+                Garantir minha vaga!
+            </button>
+
+            <div id="qr_modal20" class="modal">
+                <div class="modal_content">
+                    <span id="close_modal2" class="close">&times;</span>
+                    <p>Coloque seu nome completo na descrição do pagamento:</p>
+                    <img id="qr_code_img" src="path/to/your/qrcode.png" alt="QR Code">
+                    <a href="https://wa.me/5524999250813">Enviar comprovante</a>
+                </div>
+            </div>
+
+            <script>
+                document.getElementById('comprar_btn').addEventListener('click', function() {
+    document.getElementById('qr_modal20').style.display = 'block';
+});
+
+document.getElementById('close_modal2').addEventListener('click', function() {
+    document.getElementById('qr_modal20').style.display = 'none';
+});
+
+window.onclick = function(event) {
+    if (event.target == document.getElementById('qr_modal20')) {
+        document.getElementById('qr_modal20').style.display = 'none';
+    }
+};
+            </script>
+
+            <button style="background-color: #fff; border: 3px dashed; color: #000;" onclick="window.open('https://wa.me/5524999250813', '_blank');">
+                Saber mais informações
+            </button>
+            <a href="https://www.rionoteatro.com.br/faq/meia-entrada.php" target="_blank">Saiba se você tem direito a pagar meia.</a>
+        </div>
+    </div>
+</main>
+
+<main class="footer">
+    <p>Todos os direitos reservados | &copy 2024</p>
+</main>
+
+</body>
+</html>
